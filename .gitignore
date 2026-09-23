@@ -7,8 +7,12 @@
 target/
 *.class
 *.jar
+!.mvn/wrapper/*.jar
 
-# Node
+# Maven wrapper downloaded distributions
+.mvn/wrapper/maven-wrapper.jar
+
+# Node (future frontend)
 node_modules/
 dist/
 
@@ -16,6 +20,9 @@ dist/
 .idea/
 .vscode/
 *.iml
+.project
+.classpath
+.settings/
 
 # OS
 .DS_Store
@@ -26,3 +33,6 @@ Thumbs.db
 
 # Temporary files
 *.tmp
+
+# Docker
+infrastructure/pgdata/

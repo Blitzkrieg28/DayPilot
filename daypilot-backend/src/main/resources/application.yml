@@ -1,0 +1,27 @@
+spring:
+  application:
+    name: daypilot
+
+  profiles:
+    active: dev
+
+  # JPA — schema managed by Flyway, not Hibernate
+  jpa:
+    hibernate:
+      ddl-auto: none
+    open-in-view: false
+
+  # Flyway — enable when first migration is added
+  flyway:
+    enabled: false
+
+  # Spring AI — OpenAI
+  ai:
+    openai:
+      api-key: ${OPENAI_API_KEY:}
+      chat:
+        options:
+          model: gpt-4o
+
+server:
+  port: 8080
